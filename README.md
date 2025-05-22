@@ -30,16 +30,16 @@ python inference_tokenizer.py
 
 ### Slot-MLLM
 
-Run the following command:
+Run the following command to perform each task:
 
 ```bash
 # Image Captioning
-python inference_mllm.py --model_path=/path/to/slot_mllm 
+python inference_mllm.py --model_path=/path/to/slot_mllm --image_path=sample_data/vqa_input_img.jpg
 ```
 
 ```bash
 # Visual Question Answering
-python inference_mllm.py --model_path=/path/to/slot_mllm 
+python inference_mllm.py --model_path=/path/to/slot_mllm --image_path=sample_data/vqa_input_img.jpg --prompt="What color is the small animal?"
 ```
 
 ```bash

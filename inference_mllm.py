@@ -232,6 +232,9 @@ if __name__ == "__main__":
     model = SlotMLLMInferenceWrapper(model, visual_tokenizer, text_tokenizer, transform, special_tokens).to(device)
 
     if args.generation:
+        if args.prompt is None:
+            raise ValueError("Please provide a prompt for image generation or editing.")
+        
         if args.image_path is not None:
             ### Image Editing
             prompt = args.prompt
@@ -246,15 +249,15 @@ if __name__ == "__main__":
             generated_ids = model.text_to_image_generation(prompt)[0]
             model.save_image(generated_ids, save_path)
     else:
+        if args.image_path is None:
+            raise ValueError("Please provide an image path for image understanding.")
+        
         if args.prompt is not None:
             ### Visual Question Answering
-            # prompt = "What color is the small animal?"
             prompt = args.prompt
-            # input_image_path = "sample_data/vqa_input_img.jpg"
             input_image_path = args.image_path
             response = model.visual_question_answering(prompt, input_image_path)
         else:
             ### Captioning
-            # input_image_path = "sample_data/vqa_input_img.jpg"
             input_image_path = args.image_path
             response = model.captioning(input_image_path)
