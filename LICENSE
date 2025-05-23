@@ -19,3 +19,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+This repository includes modified code derived from:
+
+- SEED (Apache 2.0 License): https://github.com/AILab-CVC/SEED
+- BLIP-2 (BSD-3-Clause License): https://github.com/salesforce/LAVIS/tree/main/projects/blip2
+
+Please see their original LICENSE files for details.
+
+Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0  
+BSD-3-Clause License: https://opensource.org/licenses/BSD-3-Clause
